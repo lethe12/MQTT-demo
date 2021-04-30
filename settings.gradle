@@ -1,0 +1,2 @@
+include ':GatewayDemo', ':NonGatewayDemo'
+rootProject.name = "OneNET_Studio_MQTT_SDK"

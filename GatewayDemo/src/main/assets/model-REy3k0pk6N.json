@@ -1,0 +1,352 @@
+{
+  "properties": [
+    {
+      "identifier": "Brightness",
+      "name": "明暗度",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "百分比 / %",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "ColorTemperature",
+      "name": "冷暖色温",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "2700",
+          "max": "6500",
+          "unit": "开尔文 / K",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "HSLColor",
+      "name": "HSL调色",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "struct",
+        "specs": [
+          {
+            "identifier": "Hue",
+            "name": "色调",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "360",
+                "unit": "度 / °",
+                "step": "1"
+              }
+            }
+          },
+          {
+            "identifier": "Saturation",
+            "name": "饱和度",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "100",
+                "unit": "百分比 / %",
+                "step": "1"
+              }
+            }
+          },
+          {
+            "identifier": "Lightness",
+            "name": "亮度",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "100",
+                "unit": "百分比 / %",
+                "step": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "HSVColor",
+      "name": "HSV调色",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "struct",
+        "specs": [
+          {
+            "identifier": "Hue",
+            "name": "色调",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "360",
+                "unit": "度 / °",
+                "step": "1"
+              }
+            }
+          },
+          {
+            "identifier": "Saturation",
+            "name": "饱和度",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "100",
+                "unit": "百分比 / %",
+                "step": "1"
+              }
+            }
+          },
+          {
+            "identifier": "Value",
+            "name": "明度",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "100",
+                "unit": "百分比 / %",
+                "step": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "LightSwitch",
+      "name": "主灯开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "开启",
+          "false": "关闭"
+        }
+      }
+    },
+    {
+      "identifier": "RGBColor",
+      "name": "RGB调色",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "struct",
+        "specs": [
+          {
+            "identifier": "Red",
+            "name": "红色",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "255",
+                "unit": "",
+                "step": "1"
+              }
+            }
+          },
+          {
+            "identifier": "Green",
+            "name": "绿色",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "255",
+                "unit": "",
+                "step": "1"
+              }
+            }
+          },
+          {
+            "identifier": "Blue",
+            "name": "蓝色",
+            "dataType": {
+              "type": "int32",
+              "specs": {
+                "min": "0",
+                "max": "255",
+                "unit": "",
+                "step": "1"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "WorkMode",
+      "name": "工作模式",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "手动默认",
+          "1": "阅读",
+          "2": "影院",
+          "3": "夜灯",
+          "4": "生活",
+          "5": "柔和"
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "identifier": "Error",
+      "name": "故障上报",
+      "desc": "",
+      "functionMode": "event",
+      "outputData": [
+        {
+          "identifier": "ErrorCode",
+          "name": "故障代码",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "正常"
+            }
+          }
+        }
+      ],
+      "functionType": "st",
+      "eventType": "info"
+    }
+  ],
+  "services": [
+    {
+      "name": "翻转主灯开关",
+      "identifier": "ToggleLightSwitch",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [],
+      "output": []
+    },
+    {
+      "name": "颜色",
+      "identifier": "color",
+      "functionType": "u",
+      "functionMode": "service",
+      "desc": null,
+      "callType": "s",
+      "input": [
+        {
+          "identifier": "red",
+          "name": "红",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255",
+              "unit": null,
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "green",
+          "name": "绿",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255",
+              "unit": null,
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "blue",
+          "name": "蓝",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255",
+              "unit": null,
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "output": [
+        {
+          "identifier": "red",
+          "name": "红",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255",
+              "unit": null,
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "green",
+          "name": "绿",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255",
+              "unit": null,
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "blue",
+          "name": "蓝",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "255",
+              "unit": null,
+              "step": "1"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

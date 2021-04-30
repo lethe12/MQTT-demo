@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">直连设备Demo</string>
+    <array name="spinner_titles">
+        <item>上报属性</item>
+        <item>上报事件</item>
+    </array>
+</resources>

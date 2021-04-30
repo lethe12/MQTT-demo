@@ -1,0 +1,1503 @@
+{
+  "properties": [
+    {
+      "identifier": "PreRecordSupport",
+      "name": "是否支持预录",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "支持",
+          "false": "不支持"
+        }
+      }
+    },
+    {
+      "identifier": "AlarmFrequencyLevel",
+      "name": "报警频率",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "低频",
+          "1": "中频",
+          "2": "高频"
+        }
+      }
+    },
+    {
+      "identifier": "DirectUploadSupport",
+      "name": "是否支持直存",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "支持",
+          "false": "不支持"
+        }
+      }
+    },
+    {
+      "identifier": "Ringtone",
+      "name": "内置铃声",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "array",
+        "specs": {
+          "length": 10,
+          "type": "struct",
+          "specs": [
+            {
+              "identifier": "BellType",
+              "name": "铃声类型",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100",
+                  "unit": "",
+                  "step": "1"
+                }
+              }
+            },
+            {
+              "identifier": "BellName",
+              "name": "铃声名称",
+              "dataType": {
+                "type": "string",
+                "specs": {
+                  "length": "255"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "ShootInterval",
+      "name": "拍摄间隔",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "1000",
+          "unit": "秒 / s",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "MaxRecordTime",
+      "name": "最大录像时长",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "秒 / s",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "DelayedRecord",
+      "name": "延迟录像",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "秒 / s",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "ForcedAlarmSwitch",
+      "name": "强拆报警开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "开启",
+          "false": "关闭"
+        }
+      }
+    },
+    {
+      "identifier": "WDRSwitch",
+      "name": "宽动态开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "开启",
+          "false": "关闭"
+        }
+      }
+    },
+    {
+      "identifier": "InfraredSwitch",
+      "name": "红外开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "开启",
+          "false": "关闭"
+        }
+      }
+    },
+    {
+      "identifier": "VideoMessageSwitch",
+      "name": "视频留言开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "bool",
+        "specs": {
+          "true": "开启",
+          "false": "关闭"
+        }
+      }
+    },
+    {
+      "identifier": "DetectDistance",
+      "name": "侦测距离",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "10000",
+          "unit": "厘米 / cm",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "VolumeSize",
+      "name": "音量大小",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "百分比 / %",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "PowerSize",
+      "name": "电量大小",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "百分比 / %",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "IPAddress",
+      "name": "IP地址",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "QuickResponseRing",
+      "name": "快捷回复声音",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "array",
+        "specs": {
+          "length": 10,
+          "type": "struct",
+          "specs": [
+            {
+              "identifier": "RingType",
+              "name": "铃声类型",
+              "dataType": {
+                "type": "int32",
+                "specs": {
+                  "min": "0",
+                  "max": "100",
+                  "unit": "",
+                  "step": null
+                }
+              }
+            },
+            {
+              "identifier": "RingName",
+              "name": "铃声名称",
+              "dataType": {
+                "type": "string",
+                "specs": {
+                  "length": "255"
+                }
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "identifier": "LowPowerMode",
+      "name": "低功耗模式",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "struct",
+        "specs": [
+          {
+            "identifier": "LowPowerStatus",
+            "name": "低功耗状态",
+            "dataType": {
+              "type": "enum",
+              "specs": {
+                "0": "低功耗状态",
+                "1": "唤醒状态"
+              }
+            }
+          },
+          {
+            "identifier": "WakeUpData",
+            "name": "唤醒数据",
+            "dataType": {
+              "type": "string",
+              "specs": {
+                "length": "255"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "identifier": "MacAddress",
+      "name": "MAC地址",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "WifiName",
+      "name": "WIFI名称",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "WifiSignal",
+      "name": "WIFI强度",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "百分比 / %",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "StreamVideoQuality",
+      "name": "主码流视频质量",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "流畅",
+          "1": "标清",
+          "2": "高清"
+        }
+      }
+    },
+    {
+      "identifier": "BellType",
+      "name": "内置铃声设置",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "0",
+          "max": "100",
+          "unit": "",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "StorageRemainCapacity",
+      "name": "剩余存储空间",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "double",
+        "specs": {
+          "min": "0",
+          "max": "2147483647",
+          "unit": "",
+          "step": "0.01"
+        }
+      }
+    },
+    {
+      "identifier": "DayNightMode",
+      "name": "日夜模式",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "白天模式",
+          "1": "夜晚模式",
+          "2": "自动模式"
+        }
+      }
+    },
+    {
+      "identifier": "StorageTotalCapacity",
+      "name": "总存储空间",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "double",
+        "specs": {
+          "min": "0",
+          "max": "2147483647",
+          "unit": "兆字节 / MB",
+          "step": "0.01"
+        }
+      }
+    },
+    {
+      "identifier": "MotionDetectSensitivity",
+      "name": "移动侦测灵敏度",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "关闭",
+          "1": "最低档",
+          "2": "低档",
+          "3": "中档",
+          "4": "高档",
+          "5": "最高档"
+        }
+      }
+    },
+    {
+      "identifier": "DeviceID",
+      "name": "设备ID",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "StorageStatus",
+      "name": "存储介质状态",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "未插卡",
+          "1": "正常",
+          "2": "未格式化",
+          "3": "正在格式化"
+        }
+      }
+    },
+    {
+      "identifier": "LowPowerSwitch",
+      "name": "低功耗开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "关闭",
+          "1": "开启"
+        }
+      }
+    },
+    {
+      "identifier": "MotionDetectSwitch",
+      "name": "移动侦测开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "关闭",
+          "1": "开启"
+        }
+      }
+    },
+    {
+      "identifier": "PowerMode",
+      "name": "功耗模式",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "标准模式",
+          "1": "低功耗模式"
+        }
+      }
+    },
+    {
+      "identifier": "AlarmSwitch",
+      "name": "报警开关",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "关闭",
+          "1": "开启"
+        }
+      }
+    },
+    {
+      "identifier": "WakeUpData",
+      "name": "唤醒数据",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "EncryptTypeList",
+      "name": "加密类型列表",
+      "functionType": "st",
+      "accessMode": "r",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "array",
+        "specs": {
+          "length": 10,
+          "type": "int32",
+          "specs": {
+            "min": "-100",
+            "max": "100",
+            "unit": "",
+            "step": null
+          }
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "identifier": "AlarmEvent",
+      "name": "侦测报警",
+      "desc": "",
+      "functionMode": "event",
+      "outputData": [
+        {
+          "identifier": "AlarmType",
+          "name": "告警类型",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "60001": "强拆",
+              "60002": "按门铃",
+              "60003": "有人经过",
+              "60004": "有人停留",
+              "60005": "视频留言",
+              "60006": "人脸识别",
+              "60007": "门口有变动"
+            }
+          }
+        },
+        {
+          "identifier": "AlarmPicID",
+          "name": "报警抓图ID",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "Data",
+          "name": "告警内容",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        }
+      ],
+      "functionType": "st",
+      "eventType": "info"
+    },
+    {
+      "identifier": "LowBatteyEvent",
+      "name": "电量低告警",
+      "desc": "",
+      "functionMode": "event",
+      "outputData": [
+        {
+          "identifier": "BatteryLevel",
+          "name": "电量水平",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "functionType": "st",
+      "eventType": "alert"
+    },
+    {
+      "identifier": "CustomAlarm",
+      "name": "智能告警",
+      "desc": "",
+      "functionMode": "event",
+      "outputData": [
+        {
+          "identifier": "EventList",
+          "name": "事件列表",
+          "dataType": {
+            "type": "array",
+            "specs": {
+              "length": 10,
+              "type": "struct",
+              "specs": [
+                {
+                  "identifier": "AlarmType",
+                  "name": "告警类型",
+                  "dataType": {
+                    "type": "enum",
+                    "specs": {
+                      "60001": "强拆",
+                      "60002": "按门铃",
+                      "60003": "有人经过",
+                      "60004": "有人停留",
+                      "60005": "视频留言",
+                      "60006": "人脸识别"
+                    }
+                  }
+                },
+                {
+                  "identifier": "AlarmPicID",
+                  "name": "图片ID",
+                  "dataType": {
+                    "type": "string",
+                    "specs": {
+                      "length": "255"
+                    }
+                  }
+                },
+                {
+                  "identifier": "AlarmPicSize",
+                  "name": "图片大小",
+                  "dataType": {
+                    "type": "int32",
+                    "specs": {
+                      "min": "1",
+                      "max": "2147483647",
+                      "unit": "字节 / B",
+                      "step": null
+                    }
+                  }
+                },
+                {
+                  "identifier": "Data",
+                  "name": "告警内容",
+                  "dataType": {
+                    "type": "string",
+                    "specs": {
+                      "length": "255"
+                    }
+                  }
+                },
+                {
+                  "identifier": "EventTime",
+                  "name": "告警时间",
+                  "dataType": {
+                    "type": "date",
+                    "specs": {}
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "functionType": "st",
+      "eventType": "info"
+    }
+  ],
+  "services": [
+    {
+      "name": "停止录像观看",
+      "identifier": "StopVod",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "SessionID",
+          "name": "会话ID",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "开始录像文件观看",
+      "identifier": "StartVod",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "FileName",
+          "name": "录像名",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "SessionID",
+          "name": "会话ID",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "PushUrl",
+          "name": "推流地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "Scheme",
+          "name": "流协议",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "RTMP",
+              "1": "RTSP"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptKey",
+          "name": "密钥",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptType",
+          "name": "加密类型",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "9999",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "开始录像按时间观看",
+      "identifier": "StartVodByTime",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "BeginTime",
+          "name": "开始时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "2147483647",
+              "unit": "秒 / s",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "EndTime",
+          "name": "结束时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "2147483647",
+              "unit": "秒 / s",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "SessionID",
+          "name": "会话ID",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "PushUrl",
+          "name": "推流地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "Scheme",
+          "name": "流协议",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "RTMP",
+              "1": "RTSP"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptKey",
+          "name": "密钥",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptType",
+          "name": "加密类型",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "9999",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "触发设备播放音频",
+      "identifier": "TriggerAudioPlay",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "AudioUrl",
+          "name": "音频地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "AudioType",
+          "name": "音频格式",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "MP3",
+              "1": "WAVE",
+              "2": "AAC",
+              "3": "Ogg",
+              "4": "AMR"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "停止直播",
+      "identifier": "StopPushStreaming",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "StreamType",
+          "name": "码流类型",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "主码流",
+              "1": "辅码流"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "开始直播",
+      "identifier": "StartPushStreaming",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "PushUrl",
+          "name": "推流地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "StreamType",
+          "name": "码流类型",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "主码流",
+              "1": "辅码流"
+            }
+          }
+        },
+        {
+          "identifier": "Scheme",
+          "name": "流协议",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "RTMP",
+              "1": "RTSP"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptKey",
+          "name": "密钥",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptType",
+          "name": "加密类型",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "9999",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "PreTime",
+          "name": "提前推流时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "60",
+              "unit": "秒 / s",
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "output": [
+        {
+          "identifier": "Result",
+          "name": "推流结果",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "成功",
+              "1": "设备不支持",
+              "2": "设备资源不足",
+              "3": "推流连接失败"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "重启",
+      "identifier": "Reboot",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [],
+      "output": []
+    },
+    {
+      "name": "停止语音对讲",
+      "identifier": "StopVoiceIntercom",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [],
+      "output": []
+    },
+    {
+      "name": "开始语音对讲",
+      "identifier": "StartVoiceIntercom",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "IntercomUrl",
+          "name": "对讲地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "Key",
+          "name": "加解密秘钥",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "EncryptType",
+          "name": "加解密类型",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "9999",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "触发设备抓图",
+      "identifier": "TriggerPicCapture",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "UploadUrl",
+          "name": "上传地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        }
+      ],
+      "output": [
+        {
+          "identifier": "PicID",
+          "name": "图片ID",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "查询录像文件列表",
+      "identifier": "QueryRecordList",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "BeginTime",
+          "name": "开始时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "2147483647",
+              "unit": "秒 / s",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "EndTime",
+          "name": "结束时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "2147483647",
+              "unit": "秒 / s",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "QuerySize",
+          "name": "查询数量",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "128",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "Type",
+          "name": "录像类型",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "计划录像",
+              "1": "报警录像",
+              "2": "主动录像",
+              "99": "所有录像"
+            }
+          }
+        }
+      ],
+      "output": [
+        {
+          "identifier": "RecordList",
+          "name": "录像列表",
+          "dataType": {
+            "type": "array",
+            "specs": {
+              "length": 10,
+              "type": "struct",
+              "specs": [
+                {
+                  "identifier": "FileName",
+                  "name": "录像名",
+                  "dataType": {
+                    "type": "string",
+                    "specs": {
+                      "length": "255"
+                    }
+                  }
+                },
+                {
+                  "identifier": "BeginTime",
+                  "name": "开始时间",
+                  "dataType": {
+                    "type": "int32",
+                    "specs": {
+                      "min": "0",
+                      "max": "2147483647",
+                      "unit": "秒 / s",
+                      "step": null
+                    }
+                  }
+                },
+                {
+                  "identifier": "EndTime",
+                  "name": "结束时间",
+                  "dataType": {
+                    "type": "int32",
+                    "specs": {
+                      "min": "0",
+                      "max": "2147483647",
+                      "unit": "秒 / s",
+                      "step": null
+                    }
+                  }
+                },
+                {
+                  "identifier": "Size",
+                  "name": "文件大小",
+                  "dataType": {
+                    "type": "string",
+                    "specs": {
+                      "length": "255"
+                    }
+                  }
+                },
+                {
+                  "identifier": "Type",
+                  "name": "录像类型",
+                  "dataType": {
+                    "type": "enum",
+                    "specs": {
+                      "0": "计划录像",
+                      "1": "报警录像",
+                      "2": "主动录像"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "查询录像时间列表",
+      "identifier": "QueryRecordTimeList",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "BeginTime",
+          "name": "开始时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "2147483647",
+              "unit": "秒 / ″",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "EndTime",
+          "name": "结束时间",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "2147483647",
+              "unit": "秒 / ″",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "QuerySize",
+          "name": "查询数量",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "1",
+              "max": "128",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        },
+        {
+          "identifier": "Type",
+          "name": "录像类型",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "0": "计划录像",
+              "1": "报警录像",
+              "2": "主动录像",
+              "99": "所有录像"
+            }
+          }
+        }
+      ],
+      "output": [
+        {
+          "identifier": "TimeList",
+          "name": "时间列表",
+          "dataType": {
+            "type": "array",
+            "specs": {
+              "length": 10,
+              "type": "struct",
+              "specs": [
+                {
+                  "identifier": "BeginTime",
+                  "name": "开始时间",
+                  "dataType": {
+                    "type": "int32",
+                    "specs": {
+                      "min": "0",
+                      "max": "2147483647",
+                      "unit": "秒 / ″",
+                      "step": null
+                    }
+                  }
+                },
+                {
+                  "identifier": "EndTime",
+                  "name": "结束时间",
+                  "dataType": {
+                    "type": "int32",
+                    "specs": {
+                      "min": "0",
+                      "max": "2147483647",
+                      "unit": "秒 / s",
+                      "step": null
+                    }
+                  }
+                },
+                {
+                  "identifier": "Type",
+                  "name": "录像类型",
+                  "dataType": {
+                    "type": "enum",
+                    "specs": {
+                      "0": "计划录像",
+                      "1": "报警录像",
+                      "2": "主动录像"
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "播放快捷回复声音",
+      "identifier": "PlayQuickResponseRing",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "RingType",
+          "name": "铃声类型",
+          "dataType": {
+            "type": "int32",
+            "specs": {
+              "min": "0",
+              "max": "100",
+              "unit": "",
+              "step": "1"
+            }
+          }
+        }
+      ],
+      "output": []
+    },
+    {
+      "name": "开始P2P直播",
+      "identifier": "StartP2PStreaming",
+      "functionType": "st",
+      "functionMode": "service",
+      "desc": "",
+      "callType": "a",
+      "input": [
+        {
+          "identifier": "StunUrl",
+          "name": "STUN服务地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        },
+        {
+          "identifier": "SignalUrl",
+          "name": "信号服务地址",
+          "dataType": {
+            "type": "string",
+            "specs": {
+              "length": "255"
+            }
+          }
+        }
+      ],
+      "output": []
+    }
+  ]
+}

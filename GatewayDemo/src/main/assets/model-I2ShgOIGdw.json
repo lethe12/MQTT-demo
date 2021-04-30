@@ -1,0 +1,116 @@
+{
+  "properties": [
+    {
+      "identifier": "ZB_Band",
+      "name": "ZB带宽",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "enum",
+        "specs": {
+          "0": "868M",
+          "1": "915M",
+          "2": "2_4G"
+        }
+      }
+    },
+    {
+      "identifier": "NETWORK_KEY",
+      "name": "网络秘钥",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "ZB_CO_MAC",
+      "name": "ZB设备MAC地址",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "EXT_PAN_ID",
+      "name": "扩展网路标识",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    },
+    {
+      "identifier": "ZB_Channel",
+      "name": "ZB通道",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "int32",
+        "specs": {
+          "min": "11",
+          "max": "26",
+          "unit": "",
+          "step": "1"
+        }
+      }
+    },
+    {
+      "identifier": "ZB_PAN_ID",
+      "name": "网路标识",
+      "functionType": "st",
+      "accessMode": "rw",
+      "functionMode": "property",
+      "desc": "",
+      "dataType": {
+        "type": "string",
+        "specs": {
+          "length": "255"
+        }
+      }
+    }
+  ],
+  "events": [
+    {
+      "identifier": "Error",
+      "name": "故障上报",
+      "desc": "",
+      "functionMode": "event",
+      "outputData": [
+        {
+          "identifier": "ErrorCode",
+          "name": "故障代码",
+          "dataType": {
+            "type": "enum",
+            "specs": {
+              "1": "恢复正常"
+            }
+          }
+        }
+      ],
+      "functionType": "st",
+      "eventType": "info"
+    }
+  ],
+  "services": []
+}

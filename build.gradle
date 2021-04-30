@@ -1,0 +1,39 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        minSdkVersion = 19
+        compileSdkVersion = 29
+        targetSdkVersion = 29
+        buildToolsVersion = '29.0.2'
+
+        appcompatVersion = '1.1.0'
+        materialVersion = '1.1.0'
+        swiperefreshlayoutVersion = '1.1.0'
+        lifecycleVersion = '2.2.0'
+        BaseRecyclerViewAdapterHelper = '3.0.4'
+    }
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.0"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+    }
+}
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+dependencies {
+    compile files('NonGatewayDemo/libs/onenet-studio-mqtt-1.0.2.jar')
+}
